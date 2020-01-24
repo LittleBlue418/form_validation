@@ -18,7 +18,18 @@ function validateName() {
   }
 }
 
-function validatePostCode(){}
+function validatePostCode(){
+  const postCode = document.getElementById('postCode');
+  const regEx = /^([a-zA-Z0-9',.-]+( [a-zA-z0-9',.-]+)*){5,8}$/
+
+
+  if(!regEx.test(name.value)) {
+    postCode.classList.add('is-invalid');
+  } else {
+    postCode.classList.remove('is-invalid');
+  }
+
+}
 
 function validateEmail() {}
 
